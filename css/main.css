@@ -16,7 +16,7 @@
  *  09. header styles
  *  10. home
  *  11. about
- *  12. services
+ *  12. achievements
  *  13. portfolio
  *  14. testimonials
  *  15. clients
@@ -70,6 +70,51 @@ body {
   color: #353535;
   margin: 0;
   padding: 0;
+}
+
+#loading {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background:#ffbb00;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#spinner {
+    animation: rotate 0.56s infinite linear;
+    width:50px;
+    height:50px;
+    border:12px solid #fff;
+    border-bottom:12px solid #ffbb00;
+    border-radius:50%;
+    margin:0;
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#box {
+    width:100vw;
+    height:100vh;
+    z-index:9;
+    position:fixed;
+    top:0;
+}
+#box div {
+    width:16.66vw;
+    height:100%;
+    display:inline-block;
+}
+.box1 {
+    background:#ffbb00;
+}
+.box2 {
+    background:#ffbb00;
+    margin-left:-5px;
 }
 
 /* -------------------------------------------------------------------
@@ -1741,7 +1786,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     font-size: 1.5rem;
   }
   .home-content-tablecell h1 {
-    font-size: 4.2rem;
+    font-size: 3.6rem;
   }
 
   .home-social-list {
@@ -1864,7 +1909,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     font-size: 1.5rem;
   }
   #about .lead {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1881,10 +1926,10 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
 
 /* ===================================================================
- *  12. services - (_layout.scss)
+ *  12. achievements - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
-#services {
+#achievements {
   background-color: #19191b;
   background-image: url(../images/services-bg.jpg);
   background-repeat: no-repeat;
@@ -1897,7 +1942,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: 15rem 0 15rem;
   color: rgba(255, 255, 255, 0.3);
 }
-#services .overlay {
+#achievements .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1905,7 +1950,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   height: 100%;
   background-color: rgba(5, 5, 5, 0.7);
 }
-#services .gradient-overlay {
+#achievements .gradient-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1917,39 +1962,39 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=0 );
 }
-#services .section-intro h3 {
+#achievements .section-intro h3 {
   color: rgba(242, 242, 242, 0.5);
 }
-#services .section-intro h1 {
+#achievements .section-intro h1 {
   color: #FFFFFF;
 }
-#services .section-intro .lead {
+#achievements .section-intro .lead {
   color: rgba(242, 242, 242, 0.4);
 }
-#services .services-content {
+#achievements .achievements-content {
   text-align: center;
   max-width: 1040px;
 }
-#services .services-list {
+#achievements .achievements-list {
   margin-top: 1.2rem;
   text-align: center;
 }
-#services .services-list .service-item {
+#achievements .achievements-list .achievement-item {
   margin-bottom: 3rem;
   padding: 0 50px;
 }
-#services .services-list .service-item p {
+#achievements .achievements-list .achievement-item p {
   color: rgba(242, 242, 242, 0.5);
 }
-#services .services-list .icon {
+#achievements .achievements-list .icon {
   display: inline-block;
   margin-bottom: 1.5rem;
 }
-#services .services-list .icon i {
+#achievements .achievements-list .icon i {
   font-size: 5.4rem;
   color: #f9a828;
 }
-#services .services-list .h05 {
+#achievements .achievements-list .h05 {
   font-size: 1.7rem;
   line-height: 1.765;
   color: #FFFFFF;
@@ -1958,42 +2003,42 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 
 /* -------------------------------------------------------------------
  * responsive:
- * services
+ * achievements
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
-  #services .services-list .service-item {
+  #achievements .achievements-list .achievement-item {
     padding: 0 40px;
   }
 }
 @media only screen and (max-width: 900px) {
-  #services .services-list .service-item {
+  #achievements .achievements-list .achievement-item {
     padding: 0 30px;
   }
 }
 @media only screen and (max-width: 768px) {
-  #services {
+  #achievements {
     padding: 12rem 0 12rem;
   }
-  #services .services-content {
+  #achievements .achievements-content {
     max-width: 550px;
   }
-  #services .services-list .service-item {
+  #achievements .achievements-list .achievement-item {
     padding: 0 15px;
   }
-  #services .services-list .icon i {
+  #achievements .achievements-list .icon i {
     font-size: 5.1rem;
   }
 }
 @media only screen and (max-width: 600px) {
-  #services .services-list .service-item {
+  #achievements .achievements-list .achievement-item {
     padding: 0 10px;
   }
-  #services .services-list .icon i {
+  #achievements .achievements-list .icon i {
     font-size: 5rem;
   }
 }
 @media only screen and (max-width: 400px) {
-  #services .services-list .service-item {
+  #achievements .achievements-list .achievement-item {
     padding: 0;
   }
 }
