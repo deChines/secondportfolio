@@ -121,7 +121,7 @@ body {
  * links - (_document-setup)
  * ------------------------------------------------------------------- */
 a, a:visited {
-  color: #07617d;
+  color: #F79000;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -377,7 +377,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #07617d;
+  background: #F79000;
   position: absolute;
   left: -17px;
   top: 11px;
@@ -386,7 +386,7 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #07617d;
+  color: #F79000;
 }
 
 dd {
@@ -1043,7 +1043,7 @@ input::-moz-focus-inner {
   color: #252525;
 }
 .stats-tabs li a:hover {
-  color: #07617d;
+  color: #F79000;
 }
 .stats-tabs li a em {
   display: block;
@@ -1554,7 +1554,7 @@ header .header-logo a {
   width: 100%;
   height: 100%;
   background-color: #151515;
-  background-image: url(../images/randy-bg.jpg);
+  background-image: url(../images/wide-bg.jpg);
   background-repeat: no-repeat;
   background-position: center 30%;
   -webkit-background-size: cover;
@@ -1564,6 +1564,12 @@ header .header-logo a {
   min-height: 804px;
   position: relative;
 }
+@media (max-width: 800px) {
+    #home {
+        background-image: url(../images/randy-bg.jpg);
+    }
+}
+
 #home .overlay {
   position: absolute;
   top: 0;
@@ -1831,13 +1837,13 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   max-width: 850px;
 }
 #about span {
-  color: #07617d;
+  color: #F79000;
 }
 #about h3 {
   font-family: "montserrat-bold", sans-serif;
   font-size: 1.8rem;
   line-height: 1.667;
-  color: #07617d;
+  color: #F79000;
   text-transform: uppercase;
   letter-spacing: .3rem;
   position: relative;
@@ -2096,7 +2102,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   overflow: hidden;
 }
 .bricks-wrapper .item-wrap .overlay {
-  cursor: zoom-in;
+  cursor: pointer;
 }
 .bricks-wrapper .item-wrap .overlay img {
   vertical-align: bottom;
@@ -2188,6 +2194,41 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   top: 3.6rem;
   right: 3rem;
 }
+
+.bricks-wrapper .item-wrap .press {
+  display: block;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 4.6rem;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  border-radius: 3px;
+}
+
+.aa{
+  position: absolute;
+  right: 3rem;
+  top: 9.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.ab{
+  position: absolute;
+  right: 3rem;
+  top: 15rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.ac{
+  position: absolute;
+  right: 3rem;
+  top: 20.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .bricks-wrapper .item-wrap .details-link i {
   font-size: 2rem;
   line-height: 4.2rem;
@@ -2196,6 +2237,12 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   background-color: #FFFFFF;
   color: #000000;
 }
+
+.bricks-wrapper .item-wrap .press:hover, .bricks-wrapper .item-wrap .press:focus {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
 .bricks-wrapper .item-wrap .item-text, .bricks-wrapper .item-wrap .details-link {
   opacity: 0;
   visibility: hidden;
@@ -2208,6 +2255,19 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.bricks-wrapper .item-wrap .item-text, .bricks-wrapper .item-wrap .press {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .bricks-wrapper .item-wrap:hover .overlay::before {
   opacity: 1;
   visibility: visible;
@@ -2225,6 +2285,14 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   transform: scale(1.05);
 }
 .bricks-wrapper .item-wrap:hover .item-text, .bricks-wrapper .item-wrap:hover .details-link {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.bricks-wrapper .item-wrap:hover .item-text, .bricks-wrapper .item-wrap:hover .press {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateX(0);
@@ -2317,7 +2385,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   font-family: "montserrat-bold", sans-serif;
   font-size: 1.8rem;
   line-height: 1.667;
-  color: #07617d;
+  color: #F79000;
   text-transform: uppercase;
   letter-spacing: .3rem;
   position: relative;
