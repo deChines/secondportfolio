@@ -2059,6 +2059,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   min-height: 800px;
   position: relative;
   padding: 0;
+  padding-bottom: 12em;
 }
 #portfolio .intro-wrap {
   padding: 15rem 0 21rem;
@@ -2229,6 +2230,14 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding-right: 1rem;
 }
 
+.ad{
+  position: absolute;
+  right: 3rem;
+  top: 26.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .bricks-wrapper .item-wrap .details-link i {
   font-size: 2rem;
   line-height: 4.2rem;
@@ -2378,8 +2387,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * ------------------------------------------------------------------- */
 #testimonials {
   background: #FFFFFF;
-  padding: 12rem 0 7.8rem;
-  text-align: center;
+  padding: 1rem 0 7.8rem;
 }
 #testimonials h2 {
   font-family: "montserrat-bold", sans-serif;
