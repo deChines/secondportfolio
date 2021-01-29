@@ -33,6 +33,8 @@
 @import url("font-awesome/css/font-awesome.min.css");
 @import url("micons/micons.css");
 @import url("fonts.css");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
 
 
 /* ===================================================================
@@ -2629,7 +2631,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * ------------------------------------------------------------------- */
 #contact {
   background-color: #111111;
-  background-image: url(../images/contact-bg.jpg);
+  /* background-image: url(../images/contact-bg.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -2645,7 +2647,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   width: 100%;
   height: 100%;
   opacity: .75;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 #contact .section-intro h1 {
   color: white;
