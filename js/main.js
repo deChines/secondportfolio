@@ -422,5 +422,16 @@
 
 	})();
 
+	$(document).ready(function () {
+        $('#radio-1').click(function () {
+            $('.timeline-work').show();
+            $('.timeline-education').hide();
+        });
+        $('#radio-2').click(function () {
+            $('.timeline-education').show();
+            $('.timeline-work').hide();
+        });
+    });
+
 
 })(jQuery);
